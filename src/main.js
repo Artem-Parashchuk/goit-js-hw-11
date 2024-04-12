@@ -39,8 +39,8 @@ function inputSearch(event) {
                 });
                 return
             }
-
             galleryListElem.innerHTML = createCard(data.hits)
+            gallery.refresh()
         })
         .catch(error => console.log(error))
 
@@ -53,7 +53,7 @@ formElem.addEventListener('submit', inputSearch)
 let gallery = new SimpleLightbox('.gallery-item__link', {
     captionsData: 'alt',
     captionDelay: 250
-}
+    }
 );
 
 gallery.on('show.simplelightbox', function (event) {
