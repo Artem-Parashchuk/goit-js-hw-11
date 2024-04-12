@@ -155,6 +155,11 @@
 .gallery-item {
   width: 360px;
   border: 1px solid #808080;
+  transition: scale .25s ease-in;
+}
+.gallery-item:hover,
+.gallery-item:focus {
+  scale: 1.02;
 }
 .gallery-item__link {
 }
